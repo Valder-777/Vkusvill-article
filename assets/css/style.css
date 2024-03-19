@@ -1,0 +1,371 @@
+@import"reset.css";
+
+@font-face {
+    font-family: "Museo Cyrl 700";
+    font-weight: 700;
+    src: url("https://db.onlinewebfonts.com/t/5d23cb75253ca214c8715a65ab8286bd.eot");
+    src: url("https://db.onlinewebfonts.com/t/5d23cb75253ca214c8715a65ab8286bd.eot?#iefix")format("embedded-opentype"),
+        url("https://db.onlinewebfonts.com/t/5d23cb75253ca214c8715a65ab8286bd.woff2")format("woff2"),
+        url("https://db.onlinewebfonts.com/t/5d23cb75253ca214c8715a65ab8286bd.woff")format("woff"),
+        url("https://db.onlinewebfonts.com/t/5d23cb75253ca214c8715a65ab8286bd.ttf")format("truetype"),
+}
+
+@font-face {
+    font-family: "Museo Sans Cyrl 500";
+    src: url("../fonts/museosanscyrl-500.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+svg, svg path, span {
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.container {
+    max-width: 1280px;
+    min-width: 320px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 0;
+}
+
+
+.main {
+    padding-top: 22px;
+    padding-left: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 320px;
+}
+
+.contacts {
+    padding: 40px 40px;
+}
+
+.delivery-article__header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.delivery-article__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    font-size: 24px;
+    font-weight: 900;
+    padding-right: 12px;
+}
+
+.delivery-article__share {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.share-mobile {
+    display: none;
+}
+
+.share {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-items: flex-start;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+    padding-right: 15px;
+    cursor: pointer;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.share a {
+    min-width: 24px;
+}
+
+.share-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.social-btn {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 15px;
+    visibility: hidden;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    opacity: 0;
+}
+
+.share:hover .share-btn {
+    opacity: 0;
+}
+
+.share:hover .social-btn {
+    visibility: visible;
+    opacity: 1;
+}
+
+.social-btn a:hover {
+    opacity: 0.7;
+}
+
+.delivery-article__text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-family: 'Museo Sans Cyrl 500', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 140%;
+    padding-top: 15px;
+    max-width: 690px;
+    min-width: 310px;
+}
+
+.contacts__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.contacts__text {
+    font-family: 'Museo Cyrl', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.contacts__buttons {
+    padding-top: 16px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 8px
+}
+
+.contacts__buttons a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.contacts__buttons a:hover {
+    opacity: 0.7;
+}
+
+.contacts__buttons-chat {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    gap: 9px;
+    padding: 15px 56px;
+    background-color: #36BA5F;
+    border-radius: 12px;
+}
+
+.contacts__buttons-chat span {
+    font-size: 15px;
+    font-family: 'Museo Sans Cyrl 500', sans-serif;
+    font-weight: 500;
+}
+
+.contacts__buttons-call, .contacts__buttons-mail {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background-color: #F9F9F9;
+    border-radius: 12px;
+    width: 48px;
+    height: 48px;
+}
+
+@media screen and (max-width: 780px) {
+    .container {
+        max-width: 780px;
+        min-width: 320px;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    .main {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .delivery-article__title {
+        font-size: 16px;
+    }
+
+    .share {
+        display: none;
+    }
+
+    .delivery-article__text {
+        font-size: 12px;
+        padding-right: 5px;
+    }
+
+    .contacts {
+        padding: 30px 10px;
+    }
+
+    .contacts__text {
+
+        font-size: 11px;
+        max-width: 180px;
+    }
+
+    .contacts__buttons-chat {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-negative: 0;
+        flex-shrink: 0;
+        gap: 9px;
+        padding: 15px 40px;
+        background-color: #36BA5F;
+        border-radius: 12px;
+    }
+
+    .contacts__buttons-chat span {
+        font-size: 14px;
+        font-family: 'Museo Sans Cyrl 500', sans-serif;
+        font-weight: 500;
+    }
+
+
+    .contacts__buttons-call, .contacts__buttons-mail {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        background-color: #F9F9F9;
+        border-radius: 12px;
+        width: 48px;
+        height: 48px;
+    }
+
+    .share-mobile {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+        padding-right: 15px;
+        padding-top: 20px;
+        cursor: pointer;
+        -webkit-transition: 0.5s;
+        -o-transition: 0.5s;
+        transition: 0.5s;
+    }
+
+    .share-mobile a {
+        min-width: 24px;
+    }
+
+    .share-btn {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-transition: 0.3s;
+        -o-transition: 0.3s;
+        transition: 0.3s;
+    }
+
+    .social-btn {
+        position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        gap: 15px;
+        visibility: visible;
+        -webkit-transition: 0.3s;
+        -o-transition: 0.3s;
+        transition: 0.3s;
+        opacity: 1;
+    }
+
+    .share:hover .share-btn {
+        opacity: 0;
+    }
+
+    .share:hover .social-btn {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .social-btn a:hover {
+        opacity: 0.7;
+    }
+}
