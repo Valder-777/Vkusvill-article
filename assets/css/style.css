@@ -24,8 +24,9 @@ svg, svg path, span {
 }
 
 .container {
+    padding: 22px 0px 0px 40px;
     max-width: 1280px;
-    min-width: 320px;
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -36,14 +37,9 @@ svg, svg path, span {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    width: 100%;
-    margin: 0 0;
 }
 
-
 .main {
-    padding-top: 22px;
-    padding-left: 40px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -51,11 +47,11 @@ svg, svg path, span {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    min-width: 320px;
+    width: 100%;
 }
 
 .contacts {
-    padding: 40px 40px;
+    margin-top: 40px;
 }
 
 .delivery-article__header {
@@ -64,93 +60,77 @@ svg, svg path, span {
     display: flex;
     -webkit-box-pack: start;
     -ms-flex-pack: start;
-    justify-content: flex-start;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    gap: 12px;
 }
 
 .delivery-article__title {
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex;
     -ms-flex-negative: 0;
-    flex-shrink: 0;
     font-size: 24px;
     font-weight: 900;
-    padding-right: 12px;
-}
-
-.delivery-article__share {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
 }
 
 .share-mobile {
     display: none;
 }
 
-.share {
-    position: relative;
+.share, .share-btn {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    justify-items: flex-start;
-    -ms-flex-item-align: center;
-    -ms-grid-row-align: center;
-    align-self: center;
-    padding-right: 15px;
     cursor: pointer;
     -webkit-transition: 0.5s;
     -o-transition: 0.5s;
     transition: 0.5s;
 }
 
-.share a {
-    min-width: 24px;
-}
-
-.share-btn {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-transition: 0.3s;
-    -o-transition: 0.3s;
-    transition: 0.3s;
-}
-
-.social-btn {
-    position: relative;
+.social-btn__wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    gap: 15px;
-    visibility: hidden;
+    gap: 10px;
     -webkit-transition: 0.3s;
     -o-transition: 0.3s;
     transition: 0.3s;
     opacity: 0;
 }
 
-.share:hover .share-btn {
-    opacity: 0;
+.social-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background-color: #F9F9F9;
+    border-radius: 12px;
+    width: 48px;
+    height: 48px;
 }
 
-.share:hover .social-btn {
-    visibility: visible;
-    opacity: 1;
-}
-
-.social-btn a:hover {
+.social-btn:hover {
     opacity: 0.7;
 }
+
+.share:hover .share-btn {
+    opacity: 0;
+    scale: 0;
+    transform: rotate(180deg);
+}
+
+.share:hover .social-btn__wrapper {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(10px);
+}
+
 
 .delivery-article__text {
     display: -webkit-box;
@@ -160,15 +140,21 @@ svg, svg path, span {
     font-size: 15px;
     font-weight: 500;
     line-height: 140%;
-    padding-top: 15px;
+    margin-top: 15px;
     max-width: 690px;
     min-width: 310px;
+}
+
+.contacts {
+    display: flex;
+    justify-content: flex-start;
 }
 
 .contacts__wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    justify-content: flex-start;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -176,20 +162,25 @@ svg, svg path, span {
 }
 
 .contacts__text {
+    display: flex;
+    justify-content: center;
+    width: 100%;
     font-family: 'Museo Cyrl', sans-serif;
     font-weight: 600;
     font-size: 13px;
 }
 
 .contacts__buttons {
-    padding-top: 16px;
+    margin-top: 16px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    align-items: center;
-    gap: 8px
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
 }
 
 .contacts__buttons a {
@@ -205,54 +196,26 @@ svg, svg path, span {
     opacity: 0.7;
 }
 
-.contacts__buttons-chat {
+.button-chat {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    gap: 9px;
+    gap: 10px;
     padding: 15px 56px;
     background-color: #36BA5F;
     border-radius: 12px;
-}
-
-.contacts__buttons-chat span {
     font-size: 15px;
     font-family: 'Museo Sans Cyrl 500', sans-serif;
     font-weight: 500;
 }
 
-.contacts__buttons-call, .contacts__buttons-mail {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    background-color: #F9F9F9;
-    border-radius: 12px;
-    width: 48px;
-    height: 48px;
-}
 
 @media screen and (max-width: 780px) {
-    .container {
-        max-width: 780px;
-        min-width: 320px;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        margin: 0 auto;
-    }
-
-    .main {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
 
     .delivery-article__title {
-        font-size: 16px;
+        font-size: 18px;
     }
 
     .share {
@@ -260,30 +223,12 @@ svg, svg path, span {
     }
 
     .delivery-article__text {
-        font-size: 12px;
-        padding-right: 5px;
-    }
-
-    .contacts {
-        padding: 30px 10px;
+        font-size: 14px;
+        padding-right: 20px;
     }
 
     .contacts__text {
-
-        font-size: 11px;
-        max-width: 180px;
-    }
-
-    .contacts__buttons-chat {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-negative: 0;
-        flex-shrink: 0;
-        gap: 9px;
-        padding: 15px 40px;
-        background-color: #36BA5F;
-        border-radius: 12px;
+        font-size: 12px;
     }
 
     .contacts__buttons-chat span {
@@ -291,7 +236,6 @@ svg, svg path, span {
         font-family: 'Museo Sans Cyrl 500', sans-serif;
         font-weight: 500;
     }
-
 
     .contacts__buttons-call, .contacts__buttons-mail {
         display: -webkit-box;
@@ -340,32 +284,25 @@ svg, svg path, span {
         transition: 0.3s;
     }
 
+    .social-btn__wrapper {
+        opacity: 1;
+        visibility: visible;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
     .social-btn {
-        position: relative;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        gap: 15px;
-        visibility: visible;
-        -webkit-transition: 0.3s;
-        -o-transition: 0.3s;
-        transition: 0.3s;
-        opacity: 1;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        background-color: #F9F9F9;
+        border-radius: 12px;
+        width: 48px;
+        height: 48px;
     }
 
-    .share:hover .share-btn {
-        opacity: 0;
-    }
 
-    .share:hover .social-btn {
-        visibility: visible;
-        opacity: 1;
-    }
-
-    .social-btn a:hover {
-        opacity: 0.7;
-    }
 }
